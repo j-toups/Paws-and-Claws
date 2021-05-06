@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS PawsandClaws_db;
+CREATE DATABASE PawsandClaws_db;
