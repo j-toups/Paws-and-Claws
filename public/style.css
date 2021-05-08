@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    height: 100vh;
+    width: 100vw;
+}
+
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+    overflow: hidden;
+}
+
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite 0s; 
+}
+
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(../images/2people1dog.jpeg);
+  
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(../images/indoorcat.jpeg);
+    animation-delay: 10s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(../images/fallphoto.jpeg);
+    animation-delay: 20s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(../images/tabbycat.jpeg);
+    animation-delay: 30s; 
+}
+
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(../images/smallbreed.jpeg);
+    animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
