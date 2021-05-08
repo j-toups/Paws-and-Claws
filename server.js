@@ -2,14 +2,21 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+// const http = require('http');
+const app = express();
+// const server = http.createServer(app);
+const socketIo  = require("socket.io");
+// const io = new Server(server);
+
 //const routes = require('./controllers');
 //const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
 //const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const app = express();
+
 const PORT = process.env.PORT || 3001;
+
 
 
 //const hbs = exphbs.create({ helpers });
@@ -36,8 +43,22 @@ app.use(express.urlencoded({ extended: true }));
 
 //app.use(routes);
 
+
+
+app.get('/chat', (req, res) => {
+  res.sendFile(__dirname + '/chat.html');
+});
+
 sequelize.sync({ force: false }).then(() => {
 
-  app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
-
+const server = app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
+const io = socketIo(server)
+io.on('connection', (socket) => {
+  socket.on('chat message', (msg) => {
+    io.emit('chat message', msg);
+  });
 });
+});
+
+
+
