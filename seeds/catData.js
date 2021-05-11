@@ -1,13 +1,14 @@
 const { Model } = require('sequelize/types');
 const { Pet } = require('../models');
 
-const petdata = [
+const catdata = [
     {
         name: 'Flash Gordon',
         species: 'Cat',
         age: '6', 
         gender: 'Male',
         description: 'So fluffyyyyy', 
+        filename: 'tabby.jpeg'
     }, 
     {
         name: 'Bubbles', 
@@ -15,20 +16,23 @@ const petdata = [
         age: '2', 
         gender: 'female', 
         description: 'So fluffyyyyy', 
+        filename: 'orange.jpeg'
     }, 
     {
         name: 'Lulu', 
-        species: 'Dog', 
+        species: 'Cat', 
         age: '5', 
         gender: 'female',
         description: 'So fluffyyyyy', 
+        filename: 'calico.jpeg'
     }, 
     {
         name: 'Rudy',
-        species: 'Dog', 
+        species: 'Cat', 
         age: '6', 
         gender: 'female', 
         description: 'So fluffyyyyy', 
+        filename: 'dlh.jpeg'
     },
 ];
 
