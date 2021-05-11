@@ -23,10 +23,21 @@ Fancy.init(
             type: DataTypes.STRING,
             allowNull:false, 
         },
+         fancy
+        filename:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false,
+          },
+        
         description: {
             type: DataTypes.STRING, 
             allowNull: false
         },
+       main
     }, 
     {
         sequelize, 
