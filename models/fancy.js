@@ -23,6 +23,7 @@ Fancy.init(
             type: DataTypes.STRING,
             allowNull:false, 
         },
+         fancy
         filename:{
             type: DataTypes.STRING,
             allowNull: false,
@@ -32,6 +33,11 @@ Fancy.init(
             allowNull: false,
           },
         
+        description: {
+            type: DataTypes.STRING, 
+            allowNull: false
+        },
+       main
     }, 
     {
         sequelize, 
