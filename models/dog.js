@@ -14,7 +14,19 @@ Dog.init(
         species_name: {
             type: DataTypes.STRING,
             allowNull: false, 
-        }
+        },
+        age: {
+            type: DataTypes.INTEGER, 
+            allowNull: false, 
+        }, 
+        gender: {
+            type: DataTypes.STRING,
+            allowNull:false, 
+        },
+        description: {
+            type: DataTypes.STRING, 
+            allowNull: false
+        },
     }, 
     {
         sequelize, 
