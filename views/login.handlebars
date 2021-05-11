@@ -1,0 +1,124 @@
+
+
+  {{!-- <div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
+
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h2>Signup</h2>
+
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+</div> --}}
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8"></div>
+      <div class="col-md-4">
+        <div class="card text-center shadow-lg p-3 mb-5 bg-white rounded">
+          <div class="card-body">
+            <h3 class="card-title"><strong>Welcome to <br>Paws and Claws!</strong></h3>
+            <p class="card-text text-left">
+              If you're not sure what kind of pet you're looking for, or you just want to find a pet near you, we can help!
+              </br></br>
+              Sign up or sign in to take our "Best Breed Matcher" survey. To search for pets near you, click <a target="_blank" href="/pets">here!</a></p>
+              <hr>
+              <button type="button" id="signin_button" class="btn btn-info" data-toggle="modal" data-target="#signin_modal">
+                Sign in
+              </button>          
+              <button type="button" id="signup_button" class="btn btn-info" data-toggle="modal" data-target="#signup_modal">
+                Sign up
+              </button>          
+            </div>
+        </div> 
+      </div>
+    </div>  
+  </div>
+
+  <nav class="navbar fixed-bottom navbar-light bg-light text-center">
+    <div class="container text-center">
+      <h5 class="col-md-12 col-sm-12 col-xs-12"><a class="footer" href="/">Paws and Claws</a></h5>
+    </div>
+  </nav>
+
+  <!-- Signup Modal -->
+  <div class="modal fade" id="signup_modal" tabindex="-1" role="dialog" aria-labelledby="signup_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signup_modal_title">New User Signup</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="signup" name="signup" method="post" action="signup">
+            <div class="form-group">
+              <input type="email" class="form-control" id="signup_email" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="signup_password" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-primary">Signup</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signin Modal -->
+  <div class="modal fade" id="signin_modal" tabindex="-1" role="dialog" aria-labelledby="signin_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signin_modal_title">User Sign In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="signin" name="signin">
+            <div class="form-group">
+              <input type="email" class="form-control" id="signin_email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="signin_password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
