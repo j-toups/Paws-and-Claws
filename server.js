@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const routes = require('./controllers');
 
+
 // const http = require('http');
 const app = express();
 // const server = http.createServer(app);
@@ -19,11 +20,14 @@ const sequelize = require('./config/connection');
 //const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
+
+
 const app = express();
 const PORT = process.env.PORT || 3002;
 
 
 const hbs = exphbs.create({});
+
 
 
 const PORT = process.env.PORT || 3001;
@@ -54,6 +58,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
+
+
+
+app.get('/chat', (req, res) => {
+  res.sendFile(__dirname + '/chat.html');
+});
 
 
 
