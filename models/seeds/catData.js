@@ -8,6 +8,7 @@ const catdata = [
         age: '6', 
         gender: 'Male',
         description: 'So fluffyyyyy', 
+        filename: 'tabby.jpeg'
     }, 
     {
         name: 'Bubbles', 
@@ -15,6 +16,7 @@ const catdata = [
         age: '2', 
         gender: 'female', 
         description: 'So fluffyyyyy', 
+        filename: 'orange.jpeg'
     }, 
     {
         name: 'Lulu', 
@@ -22,6 +24,7 @@ const catdata = [
         age: '5', 
         gender: 'female',
         description: 'So fluffyyyyy', 
+        filename: 'calico.jpeg'
     }, 
     {
         name: 'Rudy',
@@ -29,6 +32,7 @@ const catdata = [
         age: '6', 
         gender: 'female', 
         description: 'So fluffyyyyy', 
+        filename: 'dlh.jpeg'
     },
 ];
 
