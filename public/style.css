@@ -13,7 +13,7 @@
 .navbar{
     background-color: rgb(10, 10, 10);
     font-family:fantasy;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
    
 }
 
@@ -49,9 +49,17 @@
 }
 
 .back{
-    color:rgb(243, 243, 224);
+    
     margin-right: 15px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+}
+
+.nav-link{
+    color:rgb(243, 243, 224) ;
+}
+
+.nav-link:hover{
+    color:rgb(187, 187, 187) ;
 }
 
 

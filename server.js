@@ -7,7 +7,7 @@ const routes = require('./controllers');
 
 
 // const http = require('http');
-const app = express();
+
 // const server = http.createServer(app);
 const socketIo  = require("socket.io");
 // const io = new Server(server);
@@ -30,7 +30,7 @@ const hbs = exphbs.create({});
 
 
 
-const PORT = process.env.PORT || 3001;
+
 
 
 
