@@ -1,22 +1,22 @@
 const { Model } = require('sequelize/types');
 const { Pet } = require('../models');
 
-const petdata = [
+const fancydata = [
     {
-        name: 'Sugar',
-        species: 'Cat',
-        age: '3', 
+        name: 'Boo',
+        species: 'bird',
+        age: '10', 
         gender: 'female',
     }, 
     {
-        name: 'Archer', 
-        species: 'Cat', 
+        name: 'Sonic', 
+        species: 'Hedgehog', 
         age: '2', 
         gender: 'female', 
     }, 
     {
-        name: 'Astro', 
-        species: 'Dog', 
+        name: 'Slithering', 
+        species: 'Snake', 
         age: '1', 
         gender: 'male',
     }, 
@@ -29,6 +29,6 @@ const petdata = [
     },
 ];
 
-const seedPet = () => Pet.bulkCreate(petdata);
+const seedPet = () => fancy.bulkCreate(fancydata);
 
 module.exports = seedPet;
