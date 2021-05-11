@@ -8,6 +8,7 @@ const dogdata = [
         age: '3', 
         gender: 'female',
         description: 'So fluffyyyyy', 
+        filename: 'golden.jpeg',
     }, 
     {
         name: 'Archer', 
@@ -15,6 +16,7 @@ const dogdata = [
         age: '2', 
         gender: 'female', 
         description: 'So fluffyyyyy', 
+        filename: 'kelpie.jpeg',
     }, 
     {
         name: 'Astro', 
@@ -22,6 +24,7 @@ const dogdata = [
         age: '1', 
         gender: 'male',
         description: 'So fluffyyyyy', 
+        filename: 'terrier.jpeg'
     }, 
     {
         name: 'Hops',
@@ -29,6 +32,7 @@ const dogdata = [
         age: '6', 
         gender: 'female', 
         description: 'So fluffyyyyy', 
+        filename: 'boston.jpeg'
     },
 ];
 

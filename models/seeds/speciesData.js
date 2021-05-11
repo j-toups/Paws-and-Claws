@@ -9,5 +9,11 @@ const speciesdata = [
     },
     {
         species: 'Rabbit'
+    }, 
+    {
+        species: 'Snake'
+    },
+    {
+        species: 'Bird'
     }
 ]
