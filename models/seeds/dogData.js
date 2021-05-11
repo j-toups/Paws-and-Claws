@@ -1,5 +1,5 @@
 const { Model } = require('sequelize/types');
-const { Pet } = require('../models');
+const { Dog } = require('../models');
 
 const dogdata = [
     {
@@ -7,28 +7,31 @@ const dogdata = [
         species: 'Dog',
         age: '3', 
         gender: 'female',
+        description: 'So fluffyyyyy', 
     }, 
     {
         name: 'Archer', 
         species: 'Dog', 
         age: '2', 
         gender: 'female', 
+        description: 'So fluffyyyyy', 
     }, 
     {
         name: 'Astro', 
         species: 'Dog', 
         age: '1', 
         gender: 'male',
+        description: 'So fluffyyyyy', 
     }, 
     {
         name: 'Hops',
         species: 'Dog', 
         age: '6', 
-        gender: 'female'
-
+        gender: 'female', 
+        description: 'So fluffyyyyy', 
     },
 ];
 
-const seedPet = () => Dog.bulkCreate(dogdata);
+const seedDog = () => Dog.bulkCreate(dogdata);
 
-module.exports = seedPet;
+module.exports = seedDog;
