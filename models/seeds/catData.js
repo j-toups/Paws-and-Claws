@@ -1,5 +1,5 @@
 const { Model } = require('sequelize/types');
-const { Pet } = require('../models');
+const { Cat } = require('../models');
 
 const catdata = [
     {
@@ -36,6 +36,6 @@ const catdata = [
     },
 ];
 
-const seedPet = () => Cat.bulkCreate(data);
+const seedCat = () => Cat.bulkCreate(catdata);
 
-module.exports = seedPet;
+module.exports = seedCat;
