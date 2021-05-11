@@ -8,6 +8,7 @@ const routes = require('./controllers');
 
 // const http = require('http');
 
+
 // const server = http.createServer(app);
 const socketIo  = require("socket.io");
 // const io = new Server(server);
@@ -27,6 +28,7 @@ const PORT = process.env.PORT || 3002;
 
 
 const hbs = exphbs.create({});
+
 
 
 
@@ -62,7 +64,7 @@ app.use(routes);
 
 
 app.get('/chat', (req, res) => {
-  res.sendFile(__dirname + '/chat.html');
+  res.sendFile(__dirname + '/public/chat.html');
 });
 
 
