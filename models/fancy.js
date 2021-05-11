@@ -11,7 +11,7 @@ Fancy.init(
             primaryKey: true, 
             autoIncrement: true,
         }, 
-        species_name: {
+        fancy_name: {
             type: DataTypes.STRING,
             allowNull: false, 
         }

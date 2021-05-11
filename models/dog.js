@@ -11,7 +11,7 @@ Dog.init(
             primaryKey: true, 
             autoIncrement: true,
         }, 
-        species_name: {
+        dog_name: {
             type: DataTypes.STRING,
             allowNull: false, 
         }

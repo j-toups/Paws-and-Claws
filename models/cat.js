@@ -11,7 +11,7 @@ Cat.init(
             primaryKey: true, 
             autoIncrement: true,
         }, 
-        species_name: {
+        cat_name: {
             type: DataTypes.STRING,
             allowNull: false, 
         }
