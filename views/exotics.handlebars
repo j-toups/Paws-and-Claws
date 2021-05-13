@@ -1,1 +1,11 @@
-<h1>EXOTICS</h1>
+<section>
+{{#each exotics as |exotic| }}
+  <img class='fancyImage' src="/images/{{exotic.filename}}">
+  <div class ='card'>
+    <h3>{{exotic.fancy_name}}</h3>
+    <p>Age: {{exotic.age}}</p>
+    <p>Gender: {{exotic.gender}}</p>
+    <p>About: {{exotic.description}}</p>
+  </div>
+  {{/each}}
+</section>

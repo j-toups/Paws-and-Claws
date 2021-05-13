@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Cat } = require('../models');
+const { Cat, Fancy, Dog } = require('../models');
 
 
 router.get('/', (req, res) => {
@@ -34,6 +34,26 @@ router.get('/cats', async (req, res) => {
   console.log(cats)
       res.render('cats', {
         cats,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+
+  router.get('/exotics', async (req, res) => {
+    try {
+      const fancyData = await Fancy.findAll({
+      
+      });
+  
+      const exotics = fancyData.map((exotic) =>
+         exotic.get({ plain: true })
+      );
+  
+      res.render('exotics', {
+        exotics,
+
       });
     } catch (err) {
       console.log(err);
