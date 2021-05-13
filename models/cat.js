@@ -40,4 +40,4 @@ Cat.init(
 
     }
 )
-module.exports = cat; 
+module.exports = Cat; 
