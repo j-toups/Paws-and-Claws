@@ -10,6 +10,12 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+// router.get('/cats', (req, res) => {
+//     res.render('cats', {
+
+//     });
+// });
+
 router.get('/cats', async (req, res) => {
     try {
       const catData = await Cat.findAll({
@@ -25,8 +31,8 @@ router.get('/cats', async (req, res) => {
       const cats = catData.map((cat) =>
         cat.get({ plain: true })
       );
-  
-      res.render('cat-homepage', {
+  console.log(cats)
+      res.render('cats', {
         cats,
       });
     } catch (err) {
