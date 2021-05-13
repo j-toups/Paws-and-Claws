@@ -1,9 +1,9 @@
-const { Model } = require('sequelize/types');
+
 const { Dog } = require('../models');
 
 const dogdata = [
     {
-        name: 'Sugar',
+        dog_name: 'Sugar',
         species: 'Dog',
         age: '3', 
         gender: 'female',
@@ -11,7 +11,7 @@ const dogdata = [
         filename: 'boston.jpeg',
     }, 
     {
-        name: 'Archer', 
+        dog_name: 'Archer', 
         species: 'Dog', 
         age: '2', 
         gender: 'female', 
@@ -19,7 +19,7 @@ const dogdata = [
         filename: 'golden.jpeg',
     }, 
     {
-        name: 'Astro', 
+        dog_name: 'Astro', 
         species: 'Dog', 
         age: '1', 
         gender: 'male',
@@ -27,7 +27,7 @@ const dogdata = [
         filename: 'pitpuppy.jpeg',
     }, 
     {
-        name: 'Hops',
+        dog_name: 'Hops',
         species: 'Dog', 
         age: '6', 
         gender: 'female', 

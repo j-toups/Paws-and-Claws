@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
-class fancy extends Model {}
+class Fancy extends Model {}
 
 Fancy.init(
     {
@@ -23,21 +23,17 @@ Fancy.init(
             type: DataTypes.STRING,
             allowNull:false, 
         },
-         fancy
-        filename:{
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+       
         description: {
             type: DataTypes.STRING,
             allowNull: false,
           },
         
-        description: {
-            type: DataTypes.STRING, 
-            allowNull: false
-        },
-       main
+          filename: {
+            type: DataTypes.STRING,
+            allowNull: false,
+          },
+      
     }, 
     {
         sequelize, 
@@ -46,5 +42,5 @@ Fancy.init(
         modelName: 'fancy'
 
     }
-)
-module.exports = fancy; 
+);
+module.exports = Fancy; 
