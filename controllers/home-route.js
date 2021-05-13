@@ -41,6 +41,7 @@ router.get('/cats', async (req, res) => {
     }
   });
 
+
   router.get('/exotics', async (req, res) => {
     try {
       const fancyData = await Fancy.findAll({
@@ -60,5 +61,54 @@ router.get('/cats', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+router.get('/dogs', async (req, res) => {
+  try {
+    const dogData = await Dog.findAll({
+      // include: [
+      //   {
+      //     model: Dog,
+      //     attributes: ['dog_name', 'age', 'gender', 'description', 'filename'],
+      //   },
+      // ],
+    });
+    console.log(dogData)
+
+    const dogs = dogData.map((dog) =>
+      dog.get({ plain: true })
+    );
+console.log(dogs)
+    res.render('dogs', {
+      dogs,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 
 module.exports = router;

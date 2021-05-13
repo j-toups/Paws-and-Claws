@@ -1,1 +1,11 @@
-<h1>DOGS!</h1>
+<section>
+{{#each dogs as |dog| }}
+  <img class='dogImage' src="/images/{{dog.filename}}">
+  <div class ='card'>
+    <h3>{{dog.dog_name}}</h3>
+    <p>Age: {{dog.age}}</p>
+    <p>Gender: {{dog.gender}}</p>
+    <p>About: {{dog.description}}</p>
+  </div>
+  {{/each}}
+</section>
