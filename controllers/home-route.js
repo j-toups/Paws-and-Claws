@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Cats = require('../models/cat');
+const { Cat } = require('../models');
 
 
 router.get('/', (req, res) => {
@@ -12,14 +12,15 @@ router.get('/login', (req, res) => {
 
 router.get('/cats', async (req, res) => {
     try {
-      const catData = await Cats.findAll({
-        include: [
-          {
-            model: cat,
-            attributes: ['cat_name', 'age', 'gender', 'description', 'filename'],
-          },
-        ],
+      const catData = await Cat.findAll({
+        // include: [
+        //   {
+        //     model: Cat,
+        //     attributes: ['cat_name', 'age', 'gender', 'description', 'filename'],
+        //   },
+        // ],
       });
+      console.log(catData)
   
       const cats = catData.map((cat) =>
         cat.get({ plain: true })
