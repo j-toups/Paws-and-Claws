@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection.js');
+const sequelize = require('../config/connection');
 
-class dog extends Model {}
+class Dog extends Model {}
 
 Dog.init(
     {
@@ -27,6 +27,10 @@ Dog.init(
             type: DataTypes.STRING, 
             allowNull: false
         },
+        filename: {
+            type: DataTypes.STRING,
+            allowNull: false,
+          },
     }, 
     {
         sequelize, 
@@ -35,5 +39,5 @@ Dog.init(
         modelName: 'dog'
 
     }
-)
-module.exports = dog; 
+);
+module.exports = Dog; 

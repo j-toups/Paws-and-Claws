@@ -1,34 +1,37 @@
-const { Model } = require('sequelize/types');
 const { Fancy } = require('../models');
 
 const fancydata = [
     {
-        name: 'Boo',
+        fancy_name:'Boo',
         species: 'bird',
         age: '10', 
         gender: 'female',
-        description: 'low key loud'
+        description: 'low key loud',
+        filename: 'parrot.jpeg'
     }, 
     {
-        name: 'Sonic', 
+        fancy_name: 'Sonic', 
         species: 'Hedgehog', 
         age: '2', 
         gender: 'female', 
         description: 'spikey but lovely',
+        filename: 'hedghog.jpeg'
     }, 
     {
-        name: 'Slithering', 
+        fancy_name: 'Slithering', 
         species: 'Snake', 
         age: '1', 
         gender: 'male',
         description: 'long boy',
+        filename: 'snake.jpeg'
     }, 
     {
-        name: 'Hops',
+        fancy_name: 'Hops',
         species: 'Rabbit', 
         age: '6', 
         gender: 'female',
         description: 'loves cuddles',
+        filename: 'bunny.jpeg'
     },
 ];
 
