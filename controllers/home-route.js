@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Cat, Fancy, Dog } = require('../models');
+const withAuth = require('../utils/auth');
 
 
 router.get('/', (req, res) => {
@@ -33,7 +34,7 @@ router.get('/cats', async (req, res) => {
       );
   console.log(cats)
       res.render('cats', {
-        cats,
+        cats, loggedIn: req.session.loggedIn
       });
     } catch (err) {
       console.log(err);
@@ -53,7 +54,7 @@ router.get('/cats', async (req, res) => {
       );
   
       res.render('exotics', {
-        exotics,
+        exotics, loggedIn: req.session.loggedIn
 
       });
     } catch (err) {
@@ -102,7 +103,7 @@ router.get('/dogs', async (req, res) => {
     );
 console.log(dogs)
     res.render('dogs', {
-      dogs,
+      dogs, loggedIn: req.session.loggedIn
     });
   } catch (err) {
     console.log(err);

@@ -1,3 +1,4 @@
+{{#if loggeIn}}
 <section>
 {{#each dogs as |dog| }}
   <img class='dogImage' src="/images/{{dog.filename}}">
@@ -9,3 +10,6 @@
   </div>
   {{/each}}
 </section>
+{{else}}
+<a href="/login">You must login first to view any available pets!</a>
+{{/if}}
