@@ -1,7 +1,7 @@
-
+{{#if loggedIn}}
 
 <section class="cards">
-{{#each exotics as |fancy| }}
+{{#each exotics as |fancy|}}
   <div class ='card'> 
     <h1>
     <p>{{fancy_name}}</p>
@@ -13,20 +13,10 @@
     <p>{{fancy.gender}}</p>
     <p>About: {{fancy.description}}</p>
     </h4>
-
-{{#if loggedIn}}
-<section>
-{{#each exotics as |exotic| }}
-  <img class='fancyImage' src="/images/{{exotic.filename}}">
-  <div class ='card'>
-    <h3>{{exotic.fancy_name}}</h3>
-    <p>Age: {{exotic.age}}</p>
-    <p>Gender: {{exotic.gender}}</p>
-    <p>About: {{exotic.description}}</p>
-
-  </div>
-  {{/each}}
+    </div>
+{{/each}}
 </section>
+
 {{else}}
 <a href="/login">You must login first to view any available pets!</a>
 {{/if}}
