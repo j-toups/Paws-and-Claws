@@ -1,11 +1,17 @@
-<section>
-{{#each exotics as |exotic| }}
-  <img class='fancyImage' src="/images/{{exotic.filename}}">
-  <div class ='card'>
-    <h3>{{exotic.fancy_name}}</h3>
-    <p>Age: {{exotic.age}}</p>
-    <p>Gender: {{exotic.gender}}</p>
-    <p>About: {{exotic.description}}</p>
+
+<section class="cards">
+{{#each exotics as |fancy| }}
+  <div class ='card'> 
+    <h1>
+    <p>{{fancy_name}}</p>
+    </h1>
+    <h3 class="fancy" {{fancy.fancy_name}}></h3>
+    <img class='Image' src="/images/{{fancy.filename}}">
+    <h4>
+    <p>Age: {{fancy.age}}</p>
+    <p>{{fancy.gender}}</p>
+    <p>About: {{fancy.description}}</p>
+    </h4>
   </div>
   {{/each}}
 </section>

@@ -111,7 +111,60 @@
     background-image: url(./images/smallbreed.jpeg);
     animation-delay: 40s; 
 }
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+.card {
+    flex: 0 1 24%;
+    grid-template-columns: repeat(4, 1fr);display:flex;
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #c9c9c9;
+    padding: 2.5rem;
+    float: left;
+    width: 25%;
+    padding: 10 40px;
+    margin-left: 100px;
+    margin-top: 50px;
+    object-fit: contain;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    
+  }
+  .Image {
+      max-width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 10px;
+      border-color: rgb(240, 235, 235);
+      position:relative;
+         
+  }
+  
+  h1  {
+      font-weight: 600;
+      font-size: 28pt;
+      position: relative;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-align: center;
+      position: relative;
+  }
+    
+  h4 {
+      margin-top: 20px;
+      text-align: justify;
+      font-size: 15pt;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-bottom: 0.5em;
+      text-align: left;
+      position: relative;
 
+  
+      }
+  
 @keyframes imageAnimation { 
     0% { opacity: 0; animation-timing-function: ease-in; }
     8% { opacity: 1; animation-timing-function: ease-out; }
@@ -119,7 +172,12 @@
     25% { opacity: 0 }
     100% { opacity: 0 }
 }
-
+@media screen and (max-width: 200px) {
+        .Image {
+             width: 50%;
+             height: 50%;
+        }
+  }
 
 
 

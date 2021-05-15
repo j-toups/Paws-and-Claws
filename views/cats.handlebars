@@ -1,11 +1,16 @@
 <section>
 {{#each cats as |cat| }}
-  <img class='catImage' src="/images/{{cat.filename}}">
-  <div class ='card'>
-    <h3>{{cat.cat_name}}</h3>
+  <div class ='card'> 
+    <h1>
+    <p>{{cat_name}}</p>
+    </h1>
+    <h3 class="catname" {{cat.cat_name}}></h3>
+    <img class='Image' src="/images/{{cat.filename}}">
+    <h4>
     <p>Age: {{cat.age}}</p>
-    <p>Gender: {{cat.gender}}</p>
+    <p>{{cat.gender}}</p>
     <p>About: {{cat.description}}</p>
+    </h4>
   </div>
   {{/each}}
 </section>
