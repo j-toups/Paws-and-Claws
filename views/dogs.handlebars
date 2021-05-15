@@ -1,4 +1,9 @@
+
 <section class="cards">
+
+{{#if loggedIn}}
+<section>
+
 {{#each dogs as |dog| }}
   <div class ='card'> 
     <h1>
@@ -14,3 +19,6 @@
   </div>
   {{/each}}
 </section>
+{{else}} 
+ <a href="/login">You must login first to view any available pets!</a>
+{{/if}}
