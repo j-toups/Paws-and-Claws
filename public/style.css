@@ -153,7 +153,17 @@
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       text-align: center;
       position: relative;
-      text-decoration: none;
+
+      
+  }
+
+  .name{
+      color: black;
+  }
+
+  .name:hover{
+     
+      color:rgb(187, 187, 187);
     
   }
     
