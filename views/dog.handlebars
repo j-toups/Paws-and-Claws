@@ -1,13 +1,9 @@
-
-{{!-- <section class="cards"> --}}
-
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}}
 <section>
 
-{{#each dogs as |dog| }}
+{{!-- {{#each dogs as |dog| }} --}}
   <div class ='card'> 
     <h1>
-    <a href="/dogs/{{id}}" 
     <p>{{dog_name}}</p>
     </h1>
     <h3 class="dogname" {{dog.dog_name}}></h3>
@@ -18,9 +14,8 @@
     <p>About: {{dog.description}}</p>
     </h4>
   </div>
-  </a> 
-  {{/each}}
-</section>
+  {{!-- {{/each}} --}}
+{{!-- </section>
 {{else}} 
  <a href="/login">You must login first to view any available pets!</a>
-{{/if}}
+{{/if}}  --}}

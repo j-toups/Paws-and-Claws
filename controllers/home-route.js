@@ -12,23 +12,9 @@ router.get('/login', (req, res) => {
 });
 
 
-router.get('/cats', withAuth, async (req, res) => {
-  console.log('hello!')
-    try {
-      const catData = await Cat.findAll({
- 
-      });
-
-posts
-// router.get('/cats', (req, res) => {
-//     res.render('cats', {
-
-//     });
-// });
-
 //GET ALL CATS
-main
-router.get('/cats', async (req, res) => {
+
+router.get('/cats', withAuth, async (req, res) => {
     try {
       const catData = await Cat.findAll();
       
@@ -47,7 +33,7 @@ router.get('/cats', async (req, res) => {
     }
   });
 
-posts
+
   router.post ('/cats', (req, res) => {
         Cat.create({
             cat_name: req.body.cat_name,
@@ -71,15 +57,8 @@ posts
   });
 
 
-
-
   router.get('/exotics', withAuth, async (req, res) => {
-   
-=======
-  //GET ALL EXOTICS
-main
-  router.get('/exotics', async (req, res) => {
-
+ 
     try {
       const fancyData = await Fancy.findAll();
   
@@ -123,30 +102,7 @@ router.get('/logout', async (req, res)=> {
   req.session.destroy();
   res.json('logged out!');
 })
-module.exports = router;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-posts
-module.exports = router;
 
 router.post ('/exotics', (req, res) => {
     Fancy.create({
@@ -171,41 +127,6 @@ Fancy.destroy({
 });
 
 
-//GET ALL DOGS
-main
-router.get('/dogs', async (req, res) => {
-  try {
-    const dogData = await Dog.findAll();
-    console.log(dogData)
-
-
-
-// router.get('/dogs', async (req, res) => {
-//   try {
-//     const dogData = await Dog.findAll({
-//       // include: [
-//       //   {
-//       //     model: Dog,
-//       //     attributes: ['dog_name', 'age', 'gender', 'description', 'filename'],
-//       //   },
-//       // ],
-//     });
-//     console.log(dogData)
-
-//     const dogs = dogData.map((dog) =>
-//       dog.get({ plain: true })
-//     );
-// console.log(dogs)
-//     res.render('dogs', {
-//       dogs, loggedIn: req.session.loggedIn
-//     });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
-
-posts
 router.post ('/dogs', (req, res) => {
     Dog.create({
         dog_name: req.body.dog_name,
@@ -226,27 +147,17 @@ Dog.destroy({
 }).then((deletedDog) => {
   res.json(deletedDog);
 }).catch((err) => res.json(err));
+});
+
 
 // GET ONE DOG BY ID
-router.get('/dog/:id', async(req, res) => {
+router.get('/dogs/:id', withAuth, async(req, res) => {
   try{
-    const dogData = await Dog.findByPk(req.params.id, {
-      include: [
-        {
-          model: Dog, 
-          attributes: [
-            'id', 
-            'dog_name',
-            'age', 
-            'gender', 
-            'description', 
-            'filename',
-          ],
-        },
-      ],
-    });
+    const dogData = await Dog.findByPk(req.params.id)
+   
+   
     const dog = dogData.get({plain: true});
-    res.render('dog', {dog});
+    res.render('dog', { dog, loggedIn: req.session.loggedIn});
   } catch (err) {
     console.log(err);
     res.status(500).json(err)
@@ -304,8 +215,8 @@ router.get('/fancy/:id', async(req, res) => {
     console.log(err);
     res.status(500).json(err)
   }
-main
+
 });
 
 
-// module.exports = router;
+module.exports = router;
