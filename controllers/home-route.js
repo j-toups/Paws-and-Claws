@@ -75,7 +75,7 @@ posts
 
   router.get('/exotics', withAuth, async (req, res) => {
    
-=======
+
   //GET ALL EXOTICS
 main
   router.get('/exotics', async (req, res) => {
@@ -123,7 +123,6 @@ router.get('/logout', async (req, res)=> {
   req.session.destroy();
   res.json('logged out!');
 })
-module.exports = router;
 
 
 
@@ -142,11 +141,6 @@ module.exports = router;
 
 
 
-
-
-
-posts
-module.exports = router;
 
 router.post ('/exotics', (req, res) => {
     Fancy.create({
@@ -172,7 +166,7 @@ Fancy.destroy({
 
 
 //GET ALL DOGS
-main
+
 router.get('/dogs', async (req, res) => {
   try {
     const dogData = await Dog.findAll();
@@ -205,7 +199,7 @@ router.get('/dogs', async (req, res) => {
 //   }
 // });
 
-posts
+
 router.post ('/dogs', (req, res) => {
     Dog.create({
         dog_name: req.body.dog_name,
@@ -308,4 +302,4 @@ main
 });
 
 
-// module.exports = router;
+module.exports = router;
