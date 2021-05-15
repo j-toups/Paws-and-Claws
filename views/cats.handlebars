@@ -1,5 +1,6 @@
 {{#if loggedIn}}
-<section>
+
+<section class="cards">
 {{#each cats as |cat| }}
   <div class ='card'> 
     <h1>
@@ -7,11 +8,11 @@
     </h1>
     <h3 class="catname" {{cat.cat_name}}></h3>
     <img class='Image' src="/images/{{cat.filename}}">
-    <h4>
-    <p>Age: {{cat.age}}</p>
-    <p>{{cat.gender}}</p>
-    <p>About: {{cat.description}}</p>
-    </h4>
+      <h4>
+      <p>Age: {{cat.age}}</p>
+      <p>{{cat.gender}}</p>
+      <p>About: {{cat.description}}</p>
+      </h4>
   </div>
   {{/each}}
 </section>
