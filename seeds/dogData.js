@@ -6,8 +6,8 @@ const dogdata = [
         dog_name: 'Sugar',
         species: 'Dog',
         age: '3', 
-        gender: 'female',
-        description: 'So fluffyyyyy', 
+        gender: 'Female',
+        description: 'Sugar is the sweetest dog. She loves people and children, and would be a great addition to any family. ', 
         filename: 'boston.jpeg',
     }, 
     {
