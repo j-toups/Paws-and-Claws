@@ -168,6 +168,11 @@
       text-decoration: none;
     
       }
+      .card {
+          height: 80%;
+          width: 400px;
+          position: relative;
+      }
   
 @keyframes imageAnimation { 
     0% { opacity: 0; animation-timing-function: ease-in; }
@@ -180,6 +185,7 @@
         .Image {
              width: 50%;
              height: 50%;
+             margin-right: 100px;
         }
   }
 
