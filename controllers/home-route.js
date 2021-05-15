@@ -11,6 +11,15 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+posts
+// router.get('/cats', (req, res) => {
+//     res.render('cats', {
+
+//     });
+// });
+
+//GET ALL CATS
+main
 router.get('/cats', async (req, res) => {
     try {
       const catData = await Cat.findAll();
@@ -29,6 +38,7 @@ router.get('/cats', async (req, res) => {
     }
   });
 
+posts
   router.post ('/cats', (req, res) => {
         Cat.create({
             cat_name: req.body.cat_name,
@@ -52,6 +62,9 @@ router.get('/cats', async (req, res) => {
   });
 
 
+
+  //GET ALL EXOTICS
+main
   router.get('/exotics', async (req, res) => {
     try {
       const fancyData = await Fancy.findAll();
@@ -70,6 +83,7 @@ router.get('/cats', async (req, res) => {
     }
   });
 
+posts
 module.exports = router;
 
 router.post ('/exotics', (req, res) => {
@@ -95,6 +109,8 @@ Fancy.destroy({
 });
 
 
+//GET ALL DOGS
+main
 router.get('/dogs', async (req, res) => {
   try {
     const dogData = await Dog.findAll();
@@ -113,6 +129,7 @@ console.log(dogs)
   }
 });
 
+posts
 router.post ('/dogs', (req, res) => {
     Dog.create({
         dog_name: req.body.dog_name,
@@ -133,6 +150,85 @@ Dog.destroy({
 }).then((deletedDog) => {
   res.json(deletedDog);
 }).catch((err) => res.json(err));
+
+// GET ONE DOG BY ID
+router.get('/dog/:id', async(req, res) => {
+  try{
+    const dogData = await Dog.findByPk(req.params.id, {
+      include: [
+        {
+          model: Dog, 
+          attributes: [
+            'id', 
+            'dog_name',
+            'age', 
+            'gender', 
+            'description', 
+            'filename',
+          ],
+        },
+      ],
+    });
+    const dog = dogData.get({plain: true});
+    res.render('dog', {dog});
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err)
+  }
+});
+
+
+//GET ONE CAT BY ID
+router.get('/cat/:id', async(req, res) => {
+  try{
+    const catData = await Cat.findByPk(req.params.id, {
+      include: [
+        {
+          model: Cat, 
+          attributes: [
+            'id', 
+            'cat_name',
+            'age', 
+            'gender', 
+            'description', 
+            'filename',
+          ],
+        },
+      ],
+    });
+    const cat = catData.get({plain: true});
+    res.render('cat', {cat});
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err)
+  }
+});
+
+//GET ONE EXOTIC ("FANCY") BY ID
+router.get('/fancy/:id', async(req, res) => {
+  try{
+    const fancyData = await Fancy.findByPk(req.params.id, {
+      include: [
+        {
+          model: Fancy, 
+          attributes: [
+            'id', 
+            'fancy_name',
+            'age', 
+            'gender', 
+            'description', 
+            'filename',
+          ],
+        },
+      ],
+    });
+    const Fancy = fancyData.get({plain: true});
+    res.render('fancy', {fancy});
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err)
+  }
+main
 });
 
 
