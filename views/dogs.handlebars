@@ -1,9 +1,15 @@
+
+
+{{!-- <section class="cards"> --}}
+
+
 {{#if loggedIn}}
 
 <section class="cards">
 {{#each dogs as |dog| }}
   <div class ='card'> 
     <h1>
+    <a href="/dogs/{{id}}" 
     <p>{{dog_name}}</p>
     </h1>
     <h3 class="dogname" {{dog.dog_name}}></h3>
@@ -14,7 +20,8 @@
       <p>About: {{dog.description}}</p>
       </h4>
   </div>
-{{/each}}
+  </a> 
+  {{/each}}
 </section>
 
 {{else}} 
