@@ -3,6 +3,7 @@
 <section class="cards">
 {{#each cats as |cat| }}
   <div class ='card'> 
+    <a href="/cats/{{id}}">
     <h1>
     <p>{{cat_name}}</p>
     </h1>
@@ -13,6 +14,7 @@
       <p>{{cat.gender}}</p>
       <p>About: {{cat.description}}</p>
       </h4>
+    </a>
   </div>
   {{/each}}
 </section>

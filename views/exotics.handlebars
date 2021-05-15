@@ -3,6 +3,7 @@
 <section class="cards">
 {{#each exotics as |fancy|}}
   <div class ='card'> 
+    <a href="/exotics/{{id}}">
     <h1>
     <p>{{fancy_name}}</p>
     </h1>
@@ -13,7 +14,8 @@
     <p>{{fancy.gender}}</p>
     <p>About: {{fancy.description}}</p>
     </h4>
-    </div>
+    </a>
+  </div>
 {{/each}}
 </section>
 

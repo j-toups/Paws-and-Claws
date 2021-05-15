@@ -166,25 +166,11 @@ router.get('/dogs/:id', withAuth, async(req, res) => {
 
 
 //GET ONE CAT BY ID
-router.get('/cat/:id', async(req, res) => {
+router.get('/cats/:id', async(req, res) => {
   try{
-    const catData = await Cat.findByPk(req.params.id, {
-      include: [
-        {
-          model: Cat, 
-          attributes: [
-            'id', 
-            'cat_name',
-            'age', 
-            'gender', 
-            'description', 
-            'filename',
-          ],
-        },
-      ],
-    });
+    const catData = await Cat.findByPk(req.params.id);
     const cat = catData.get({plain: true});
-    res.render('cat', {cat});
+    res.render('cat', {cat, loggedIn: req.session.loggedIn});
   } catch (err) {
     console.log(err);
     res.status(500).json(err)
@@ -192,30 +178,15 @@ router.get('/cat/:id', async(req, res) => {
 });
 
 //GET ONE EXOTIC ("FANCY") BY ID
-router.get('/fancy/:id', async(req, res) => {
+router.get('/exotics/:id', async(req, res) => {
   try{
-    const fancyData = await Fancy.findByPk(req.params.id, {
-      include: [
-        {
-          model: Fancy, 
-          attributes: [
-            'id', 
-            'fancy_name',
-            'age', 
-            'gender', 
-            'description', 
-            'filename',
-          ],
-        },
-      ],
-    });
-    const Fancy = fancyData.get({plain: true});
-    res.render('fancy', {fancy});
+    const fancyData = await Fancy.findByPk(req.params.id);
+    const fancy = fancyData.get({plain: true});
+    res.render('exotic', {fancy, loggedIn: req.session.loggedIn});
   } catch (err) {
     console.log(err);
     res.status(500).json(err)
   }
-
 });
 
 
