@@ -36,6 +36,7 @@ router.get('/cats', withAuth, async (req, res) => {
 
   router.post ('/cats', (req, res) => {
         Cat.create({
+            species: res.body.species,
             cat_name: req.body.cat_name,
             age: req.body.age,
             gender: req.body.gender,
@@ -106,6 +107,7 @@ router.get('/logout', async (req, res)=> {
 
 router.post ('/exotics', (req, res) => {
     Fancy.create({
+        species: req.body.species,
         fancy_name: req.body.fancy_name,
         age: req.body.age,
         gender: req.body.gender,
@@ -129,6 +131,7 @@ Fancy.destroy({
 
 router.post ('/dogs', (req, res) => {
     Dog.create({
+        species: req.body.species,
         dog_name: req.body.dog_name,
         age: req.body.age,
         gender: req.body.gender,
