@@ -10,10 +10,7 @@ Cat.init(
             allowNull: false, 
             primaryKey: true, 
             autoIncrement: true,
-        }, 
-        species:{
-            type: DataTypes.STRING,
-            allowNull: false,
+    
         },
         cat_name: {
             type: DataTypes.STRING,
