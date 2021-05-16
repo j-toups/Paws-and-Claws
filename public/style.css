@@ -133,9 +133,11 @@
     border-radius: 7px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
     
+    
   }
   .Image {
       max-width: 100%;
+      width: fit-content;
       height: 320px;
       object-fit: cover;
       border-radius: 10px;
@@ -151,6 +153,18 @@
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       text-align: center;
       position: relative;
+
+      
+  }
+
+  .name{
+      color: black;
+  }
+
+  .name:hover{
+     
+      color:rgb(187, 187, 187);
+    
   }
     
   h4 {
@@ -161,8 +175,13 @@
       margin-bottom: 0.5em;
       text-align: left;
       position: relative;
-
-  
+      text-decoration: none;
+    
+      }
+      .card {
+          height: 80%;
+          width: 400px;
+          position: relative;
       }
   
 @keyframes imageAnimation { 
@@ -176,6 +195,7 @@
         .Image {
              width: 50%;
              height: 50%;
+             margin-right: 100px;
         }
   }
 
