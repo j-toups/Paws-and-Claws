@@ -4,16 +4,16 @@
 {{!-- {{#each dogs as |dog| }} --}}
   <div class ='card'> 
     <h1>
-    <a href="/dogs/{{id}}"</a>
+    <a href="/dogs/{{id}}" class="name"</a>
     <p>{{dog.dog_name}}</p>
     </h1>
     
     <img class='Image' src="/images/{{dog.filename}}">
      <h3 class="dogname" {{dog.dog_name}}></h3>
       <h4>
-      <p>Age: {{dog.age}}</p>
+      <p>{{dog.age}} Years Old</p>
       <p>{{dog.gender}}</p>
-      <p>About: {{dog.description}}</p>
+      <p>{{dog.description}}</p>
       </h4>
   </div>
   {{!-- {{/each}} --}}

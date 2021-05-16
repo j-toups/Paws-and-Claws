@@ -159,12 +159,13 @@
 
   .name{
       color: black;
+      text-decoration: none;
   }
 
   .name:hover{
      
       color:rgb(187, 187, 187);
-    
+    text-decoration: none;
   }
     
   h4 {
