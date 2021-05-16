@@ -15,6 +15,10 @@ Fancy.init(
             type: DataTypes.STRING,
             allowNull: false, 
         },
+        species:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         age: {
             type: DataTypes.INTEGER, 
             allowNull: false, 
