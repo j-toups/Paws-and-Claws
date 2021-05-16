@@ -11,13 +11,13 @@ Fancy.init(
             primaryKey: true, 
             autoIncrement: true,
         }, 
-        fancy_name: {
-            type: DataTypes.STRING,
-            allowNull: false, 
-        },
         species:{
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        fancy_name: {
+            type: DataTypes.STRING,
+            allowNull: false, 
         },
         age: {
             type: DataTypes.INTEGER, 
