@@ -54,6 +54,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+// app.use(express.static('images'));
+// app.get('/static', (req, res) => {
+//   res.render('static');
+// });
 
 
 // app.get('/chat', (req, res) => {

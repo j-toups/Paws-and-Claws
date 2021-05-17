@@ -66,6 +66,7 @@ router.post('/logout', async (req, res) => {
         });
     } else {
         res.status(404).end();
+        
     }
 });
 
