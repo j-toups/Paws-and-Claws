@@ -182,7 +182,7 @@ router.get('/exotics/:id', async(req, res) => {
   try{
     const fancyData = await Fancy.findByPk(req.params.id);
 
-    const Fancy = fancyData.get({plain: true});
+    const exotic = fancyData.get({plain: true});
     res.render('exotic', {exotic, loggedIn: req.session.loggedIn});
 
   } catch (err) {
