@@ -154,8 +154,6 @@ Dog.destroy({
 router.get('/dogs/:id', withAuth, async(req, res) => {
   try{
     const dogData = await Dog.findByPk(req.params.id)
-   
-   
     const dog = dogData.get({plain: true});
     res.render('dog', { dog, loggedIn: req.session.loggedIn});
   } catch (err) {
@@ -166,7 +164,7 @@ router.get('/dogs/:id', withAuth, async(req, res) => {
 
 
 //GET ONE CAT BY ID
-router.get('/cats/:id', async(req, res) => {
+router.get('/cats/:id', withAuth, async(req, res) => {
   try{
     const catData = await Cat.findByPk(req.params.id);
     const cat = catData.get({plain: true});
@@ -178,12 +176,12 @@ router.get('/cats/:id', async(req, res) => {
 });
 
 //GET ONE EXOTIC ("FANCY") BY ID
-router.get('/exotics/:id', async(req, res) => {
+router.get('/exotics/:id', withAuth, async(req, res) => {
   try{
     const fancyData = await Fancy.findByPk(req.params.id);
 
-    const exotic = fancyData.get({plain: true});
-    res.render('exotic', {exotic, loggedIn: req.session.loggedIn});
+    const fancy = fancyData.get({plain: true});
+    res.render('exotic', {fancy, loggedIn: req.session.loggedIn});
 
   } catch (err) {
     console.log(err);
