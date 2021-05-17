@@ -15,6 +15,10 @@ router.get('/text', (req, res) => {
   res.render('text');
 });
 
+router.get('/contact', (req, res)=> {
+  res.render('contact');
+})
+
 
 //GET ALL CATS
 
@@ -104,7 +108,7 @@ router.get('/cats', withAuth, async (req, res) => {
 
 router.get('/logout', async (req, res)=> {
   req.session.destroy();
-  res.json('logged out!');
+  res.render('logout');
 })
 
 
