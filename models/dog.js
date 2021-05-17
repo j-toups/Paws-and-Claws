@@ -10,7 +10,8 @@ Dog.init(
             allowNull: false, 
             primaryKey: true, 
             autoIncrement: true,
-        }, 
+       
+        },
         dog_name: {
             type: DataTypes.STRING,
             allowNull: false, 

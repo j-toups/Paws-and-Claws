@@ -10,7 +10,8 @@ Fancy.init(
             allowNull: false, 
             primaryKey: true, 
             autoIncrement: true,
-        }, 
+    
+        },
         fancy_name: {
             type: DataTypes.STRING,
             allowNull: false, 
@@ -27,13 +28,12 @@ Fancy.init(
         description: {
             type: DataTypes.STRING,
             allowNull: false,
-          },
+        },
         
-          filename: {
+        filename: {
             type: DataTypes.STRING,
             allowNull: false,
-          },
-      
+        },
     }, 
     {
         sequelize, 

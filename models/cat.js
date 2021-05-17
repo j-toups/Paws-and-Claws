@@ -10,7 +10,8 @@ Cat.init(
             allowNull: false, 
             primaryKey: true, 
             autoIncrement: true,
-        }, 
+    
+        },
         cat_name: {
             type: DataTypes.STRING,
             allowNull: false, 
