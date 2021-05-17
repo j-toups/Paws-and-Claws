@@ -3,7 +3,6 @@ const { Fancy } = require('../models');
 const fancydata = [
     {
         fancy_name:'Boo',
-        species: 'bird',
         age: '10', 
         gender: 'female',
         description: 'low key loud',
@@ -11,7 +10,6 @@ const fancydata = [
     }, 
     {
         fancy_name: 'Sonic', 
-        species: 'Hedgehog', 
         age: '2', 
         gender: 'female', 
         description: 'spikey but lovely',
@@ -19,7 +17,6 @@ const fancydata = [
     }, 
     {
         fancy_name: 'Slithering', 
-        species: 'Snake', 
         age: '1', 
         gender: 'male',
         description: 'long boy',
@@ -27,7 +24,6 @@ const fancydata = [
     }, 
     {
         fancy_name: 'Hops',
-        species: 'Rabbit', 
         age: '6', 
         gender: 'female',
         description: 'loves cuddles',

@@ -28,13 +28,12 @@ Fancy.init(
         description: {
             type: DataTypes.STRING,
             allowNull: false,
-          },
+        },
         
-          filename: {
+        filename: {
             type: DataTypes.STRING,
             allowNull: false,
-          },
-      
+        },
     }, 
     {
         sequelize, 
