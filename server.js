@@ -56,15 +56,15 @@ app.use(routes);
 
 
 
-app.get('/chat', (req, res) => {
-  res.sendFile(__dirname + '/public/chat.html');
-});
+// app.get('/chat', (req, res) => {
+//   res.sendFile(__dirname + '/public/chat.html');
+// });
 
 
 
-app.get('/chat', (req, res) => {
-  res.sendFile(__dirname + '/chat.html');
-});
+// app.get('/chat', (req, res) => {
+//   res.sendFile(__dirname + '/chat.html');
+// });
 
 sequelize.sync({ force: false }).then(() => {
 

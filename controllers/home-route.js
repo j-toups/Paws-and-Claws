@@ -11,6 +11,10 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+router.get('/text', (req, res) => {
+  res.render('text');
+});
+
 
 //GET ALL CATS
 
